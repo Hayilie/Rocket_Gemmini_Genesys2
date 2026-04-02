@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Apr  2 15:21:54 2026
+# Process ID         : 43556
+# Current directory  : /home/mehme/GitHub/BigRocket_LeanGemmini_Genesys2/outputs/managed_proj/managed_proj.runs/clk_wiz_0_synth_1
+# Command line       : vivado -log clk_wiz_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz_0.tcl
+# Log file           : /home/mehme/GitHub/BigRocket_LeanGemmini_Genesys2/outputs/managed_proj/managed_proj.runs/clk_wiz_0_synth_1/clk_wiz_0.vds
+# Journal file       : /home/mehme/GitHub/BigRocket_LeanGemmini_Genesys2/outputs/managed_proj/managed_proj.runs/clk_wiz_0_synth_1/vivado.jou
+# Running On         : mehme-HP-Pavilion-Gaming-Laptop-15-dk2xxx
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz
+# CPU Frequency      : 400.000 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 16501 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 20796 MB
+# Available Virtual  : 18295 MB
+#-----------------------------------------------------------
+source clk_wiz_0.tcl -notrace

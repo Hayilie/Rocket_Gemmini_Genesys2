@@ -1,0 +1,1000 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Thu Apr  2 15:15:41 2026
+| Host         : mehme-HP-Pavilion-Gaming-Laptop-15-dk2xxx running 64-bit Ubuntu 24.04.3 LTS
+| Command      : report_timing_summary -file ./reports/timing_impl_20260402_150633.txt
+| Design       : FPGA_Top
+| Device       : 7k325t-ffg900
+| Speed File   : -2  PRODUCTION 1.12 2017-02-17
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (4)
+6. checking no_output_delay (3)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (4)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 4 input ports with no input delay but user has a false path constraint. (MEDIUM)
+
+
+6. checking no_output_delay (3)
+-------------------------------
+ There is 1 port with no output delay specified. (HIGH)
+
+ There are 2 ports with no output delay but user has a false path constraint (MEDIUM)
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.889        0.000                      0               168354       -0.215      -10.772                    134               168354        1.100        0.000                       0                 74148  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock                 Waveform(ns)         Period(ns)      Frequency(MHz)
+-----                 ------------         ----------      --------------
+jtag_clk_pin          {0.000 50.000}       100.000         10.000          
+sys_clk_pin           {0.000 2.500}        5.000           200.000         
+  clk_out1_clk_wiz_0  {0.000 16.667}       33.333          30.000          
+  clkfbout_clk_wiz_0  {0.000 25.000}       50.000          20.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock                     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----                     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+jtag_clk_pin               45.437        0.000                      0                  548        0.117        0.000                      0                  548       49.600        0.000                       0                   290  
+sys_clk_pin                                                                                                                                                             1.100        0.000                       0                     2  
+  clk_out1_clk_wiz_0        0.889        0.000                      0               167710       -0.215      -10.772                    134               167710       15.899        0.000                       0                 73853  
+  clkfbout_clk_wiz_0                                                                                                                                                   48.591        0.000                       0                     3  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group          From Clock          To Clock                WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------          ----------          --------                -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+**async_default**   clk_out1_clk_wiz_0  clk_out1_clk_wiz_0       29.004        0.000                      0                   43        0.103        0.000                      0                   43  
+**async_default**   jtag_clk_pin        jtag_clk_pin             45.575        0.000                      0                   53        0.654        0.000                      0                   53  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  jtag_clk_pin
+  To Clock:  jtag_clk_pin
+
+Setup :            0  Failing Endpoints,  Worst Slack       45.437ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.117ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack       49.600ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             45.437ns  (required time - arrival time)
+  Source:                 chiptop/system/dtm/tapIO_controllerInternal/activeInstruction_reg[2]/C
+                            (falling edge-triggered cell FDCE clocked by jtag_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            chiptop/system/tlDM/dmOuter/dmiBypass/bar/flight_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by jtag_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             jtag_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            50.000ns  (jtag_clk_pin rise@100.000ns - jtag_clk_pin fall@50.000ns)
+  Data Path Delay:        4.319ns  (logic 0.644ns (14.909%)  route 3.675ns (85.091%))
+  Logic Levels:           5  (LUT2=1 LUT5=2 LUT6=2)
+  Clock Path Skew:        -0.109ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.512ns = ( 104.512 - 100.000 ) 
+    Source Clock Delay      (SCD):    5.005ns = ( 55.005 - 50.000 ) 
+    Clock Pessimism Removal (CPR):    0.384ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock jtag_clk_pin fall edge)
+                                                     50.000    50.000 f  
+    U27                                               0.000    50.000 f  jtag_tck (IN)
+                         net (fo=0)                   0.000    50.000    jtag_tck
+    U27                  IBUF (Prop_ibuf_I_O)         1.497    51.497 f  jtag_tck_IBUF_inst/O
+                         net (fo=1, routed)           1.973    53.470    jtag_tck_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.093    53.563 f  jtag_tck_IBUF_BUFG_inst/O
+                         net (fo=289, routed)         1.442    55.005    chiptop/system/dtm/tapIO_controllerInternal/CLK
+    SLICE_X136Y266       FDCE                                         r  chiptop/system/dtm/tapIO_controllerInternal/activeInstruction_reg[2]/C  (IS_INVERTED)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X136Y266       FDCE (Prop_fdce_C_Q)         0.240    55.245 r  chiptop/system/dtm/tapIO_controllerInternal/activeInstruction_reg[2]/Q
+                         net (fo=6, routed)           0.450    55.696    chiptop/system/dtm/tapIO_controllerInternal/activeInstruction_reg_n_0_[2]
+    SLICE_X136Y265       LUT5 (Prop_lut5_I3_O)        0.134    55.830 f  chiptop/system/dtm/tapIO_controllerInternal/regs_34_i_3/O
+                         net (fo=6, routed)           0.838    56.667    chiptop/system/dtm/tapIO_controllerInternal/stateMachine/dmiReqReg_data_reg[0]_0
+    SLICE_X114Y265       LUT5 (Prop_lut5_I4_O)        0.134    56.801 f  chiptop/system/dtm/tapIO_controllerInternal/stateMachine/regs_34_i_5/O
+                         net (fo=50, routed)          1.017    57.818    chiptop/system/dtm/tapIO_controllerInternal/stateMachine/io_chainIn_capture0
+    SLICE_X100Y266       LUT6 (Prop_lut6_I5_O)        0.043    57.861 r  chiptop/system/dtm/tapIO_controllerInternal/stateMachine/cdc_reg[32]_i_2/O
+                         net (fo=6, routed)           0.640    58.502    chiptop/system/tlDM/dmOuter/dmiBypass/bar/flight_reg[1]_0
+    SLICE_X97Y268        LUT6 (Prop_lut6_I4_O)        0.043    58.545 r  chiptop/system/tlDM/dmOuter/dmiBypass/bar/flight[0]_i_2/O
+                         net (fo=2, routed)           0.357    58.902    chiptop/system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/_next_flight_T_10_dspDelayedAccum[0]
+    SLICE_X96Y268        LUT2 (Prop_lut2_I1_O)        0.050    58.952 r  chiptop/system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/flight[0]_i_1/O
+                         net (fo=1, routed)           0.373    59.325    chiptop/system/tlDM/dmOuter/dmiBypass/bar/flight_reg[0]_0
+    SLICE_X96Y268        FDRE                                         r  chiptop/system/tlDM/dmOuter/dmiBypass/bar/flight_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock jtag_clk_pin rise edge)
+                                                    100.000   100.000 r  
+    U27                                               0.000   100.000 r  jtag_tck (IN)
+                         net (fo=0)                   0.000   100.000    jtag_tck
+    U27                  IBUF (Prop_ibuf_I_O)         1.365   101.365 r  jtag_tck_IBUF_inst/O
+                         net (fo=1, routed)           1.854   103.219    jtag_tck_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.083   103.302 r  jtag_tck_IBUF_BUFG_inst/O
+                         net (fo=289, routed)         1.210   104.512    chiptop/system/tlDM/dmOuter/dmiBypass/bar/jtag_tck_IBUF_BUFG
+    SLICE_X96Y268        FDRE                                         r  chiptop/system/tlDM/dmOuter/dmiBypass/bar/flight_reg[0]/C
+                         clock pessimism              0.384   104.896    
+                         clock uncertainty           -0.035   104.861    
+    SLICE_X96Y268        FDRE (Setup_fdre_C_D)       -0.099   104.762    chiptop/system/tlDM/dmOuter/dmiBypass/bar/flight_reg[0]
+  -------------------------------------------------------------------
+                         required time                        104.762    
+                         arrival time                         -59.325    
+  -------------------------------------------------------------------
+                         slack                                 45.437    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.117ns  (arrival time - required time)
+  Source:                 chiptop/system/dtm/dmiAccessChain/regs_40_reg/C
+                            (rising edge-triggered cell FDRE clocked by jtag_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            chiptop/system/dtm/dmiAccessChain/regs_39_reg/D
+                            (rising edge-triggered cell FDRE clocked by jtag_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             jtag_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (jtag_clk_pin rise@0.000ns - jtag_clk_pin rise@0.000ns)
+  Data Path Delay:        0.189ns  (logic 0.128ns (67.656%)  route 0.061ns (32.344%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.451ns
+    Source Clock Delay      (SCD):    1.960ns
+    Clock Pessimism Removal (CPR):    0.480ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock jtag_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    U27                                               0.000     0.000 r  jtag_tck (IN)
+                         net (fo=0)                   0.000     0.000    jtag_tck
+    U27                  IBUF (Prop_ibuf_I_O)         0.422     0.422 r  jtag_tck_IBUF_inst/O
+                         net (fo=1, routed)           0.904     1.326    jtag_tck_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.026     1.352 r  jtag_tck_IBUF_BUFG_inst/O
+                         net (fo=289, routed)         0.608     1.960    chiptop/system/dtm/dmiAccessChain/jtag_tck_IBUF_BUFG
+    SLICE_X88Y266        FDRE                                         r  chiptop/system/dtm/dmiAccessChain/regs_40_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X88Y266        FDRE (Prop_fdre_C_Q)         0.100     2.060 r  chiptop/system/dtm/dmiAccessChain/regs_40_reg/Q
+                         net (fo=2, routed)           0.061     2.121    chiptop/system/dtm/tapIO_controllerInternal/stateMachine/regs_39_reg[6]
+    SLICE_X89Y266        LUT4 (Prop_lut4_I3_O)        0.028     2.149 r  chiptop/system/dtm/tapIO_controllerInternal/stateMachine/regs_39_i_1/O
+                         net (fo=1, routed)           0.000     2.149    chiptop/system/dtm/dmiAccessChain/regs_39_reg_0
+    SLICE_X89Y266        FDRE                                         r  chiptop/system/dtm/dmiAccessChain/regs_39_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock jtag_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    U27                                               0.000     0.000 r  jtag_tck (IN)
+                         net (fo=0)                   0.000     0.000    jtag_tck
+    U27                  IBUF (Prop_ibuf_I_O)         0.618     0.618 r  jtag_tck_IBUF_inst/O
+                         net (fo=1, routed)           0.973     1.591    jtag_tck_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.030     1.621 r  jtag_tck_IBUF_BUFG_inst/O
+                         net (fo=289, routed)         0.830     2.451    chiptop/system/dtm/dmiAccessChain/jtag_tck_IBUF_BUFG
+    SLICE_X89Y266        FDRE                                         r  chiptop/system/dtm/dmiAccessChain/regs_39_reg/C
+                         clock pessimism             -0.480     1.971    
+    SLICE_X89Y266        FDRE (Hold_fdre_C_D)         0.061     2.032    chiptop/system/dtm/dmiAccessChain/regs_39_reg
+  -------------------------------------------------------------------
+                         required time                         -2.032    
+                         arrival time                           2.149    
+  -------------------------------------------------------------------
+                         slack                                  0.117    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         jtag_clk_pin
+Waveform(ns):       { 0.000 50.000 }
+Period(ns):         100.000
+Sources:            { jtag_tck }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period        n/a     BUFG/I   n/a            1.408         100.000     98.591     BUFGCTRL_X0Y2   jtag_tck_IBUF_BUFG_inst/I
+Low Pulse Width   Slow    FDRE/C   n/a            0.400         50.000      49.600     SLICE_X89Y265   chiptop/system/dtm/dmiReqReg_addr_reg[6]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.350         50.000      49.650     SLICE_X103Y267  chiptop/system/dtm/busyReg_reg/C
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        1.100ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_pin
+Waveform(ns):       { 0.000 2.500 }
+Period(ns):         5.000
+Sources:            { sys_clk_p }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     BUFG/I             n/a            1.408         5.000       3.591      BUFGCTRL_X0Y4    genesystimer/inst/clkin1_bufg1/I
+Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       5.000       95.000     MMCME2_ADV_X1Y0  genesystimer/inst/mmcm_adv_inst/CLKIN1
+Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            1.400         2.500       1.100      MMCME2_ADV_X1Y0  genesystimer/inst/mmcm_adv_inst/CLKIN1
+High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            1.400         2.500       1.100      MMCME2_ADV_X1Y0  genesystimer/inst/mmcm_adv_inst/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_out1_clk_wiz_0
+  To Clock:  clk_out1_clk_wiz_0
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.889ns,  Total Violation        0.000ns
+Hold  :          134  Failing Endpoints,  Worst Slack       -0.215ns,  Total Violation      -10.772ns
+PW    :            0  Failing Endpoints,  Worst Slack       15.899ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.889ns  (required time - arrival time)
+  Source:                 chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/wrap_1_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@16.667ns period=33.333ns})
+  Destination:            chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/pipe_out_p/stages_0_resp_data_15_0_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@16.667ns period=33.333ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            33.333ns  (clk_out1_clk_wiz_0 rise@33.333ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        31.888ns  (logic 10.283ns (32.248%)  route 21.605ns (67.752%))
+  Logic Levels:           66  (CARRY4=19 DSP48E1=2 LUT2=3 LUT3=5 LUT4=6 LUT5=10 LUT6=20 RAMD32=1)
+  Clock Path Skew:        -0.476ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.306ns = ( 37.640 - 33.333 ) 
+    Source Clock Delay      (SCD):    5.036ns
+    Clock Pessimism Removal (CPR):    0.253ns
+  Clock Uncertainty:      0.146ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.283ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    AD12                                              0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    genesystimer/inst/sys_clk_p
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.906     0.906 r  genesystimer/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           2.299     3.205    genesystimer/inst/clk_in1_clk_wiz_0_buf
+    BUFGCTRL_X0Y4        BUFG (Prop_bufg_I_O)         0.093     3.298 r  genesystimer/inst/clkin1_bufg1/O
+                         net (fo=1, routed)           1.936     5.234    genesystimer/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.498     0.736 r  genesystimer/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.469     3.205    genesystimer/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.298 r  genesystimer/inst/clkout1_buf/O
+                         net (fo=73024, routed)       1.738     5.036    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/clk_inner
+    SLICE_X55Y47         FDRE                                         r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/wrap_1_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y47         FDRE (Prop_fdre_C_Q)         0.223     5.259 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/wrap_1_reg/Q
+                         net (fo=187, routed)         1.687     6.945    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/Memory_reg_0_1_480_485/ADDRA0
+    SLICE_X42Y95         RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.047     6.992 f  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/Memory_reg_0_1_480_485/RAMA/O
+                         net (fo=6, routed)           0.511     7.503    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/_norm_unit_passthru_q_io_deq_bits_acc_read_resp_data_15_0[0]
+    SLICE_X44Y99         LUT5 (Prop_lut5_I0_O)        0.134     7.637 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/io_mulAddResult1_i_129__1/O
+                         net (fo=1, routed)           0.410     8.047    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_in_to_rec_fn_15/io_mulAddResult1_i_135__1
+    SLICE_X45Y105        CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.287     8.334 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_in_to_rec_fn_15/io_mulAddResult1_i_114/CO[3]
+                         net (fo=1, routed)           0.000     8.334    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_in_to_rec_fn_15/io_mulAddResult1_i_114_n_0
+    SLICE_X45Y106        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.053     8.387 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_in_to_rec_fn_15/io_mulAddResult1_i_113/CO[3]
+                         net (fo=1, routed)           0.000     8.387    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_in_to_rec_fn_15/io_mulAddResult1_i_113_n_0
+    SLICE_X45Y107        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.053     8.440 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_in_to_rec_fn_15/_sExpAlignedProd_T_1__0_carry_i_34/CO[3]
+                         net (fo=1, routed)           0.000     8.440    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_in_to_rec_fn_15/_sExpAlignedProd_T_1__0_carry_i_34_n_0
+    SLICE_X45Y108        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.053     8.493 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_in_to_rec_fn_15/io_mulAddResult1_i_112/CO[3]
+                         net (fo=1, routed)           0.000     8.493    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_in_to_rec_fn_15/io_mulAddResult1_i_112_n_0
+    SLICE_X45Y109        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.111     8.604 f  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_in_to_rec_fn_15/_sExpAlignedProd_T_1__0_carry_i_36/O[0]
+                         net (fo=2, routed)           0.354     8.958    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/intAsRawFloat_absIn0_135[16]
+    SLICE_X44Y109        LUT6 (Prop_lut6_I1_O)        0.124     9.082 f  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/_sExpAlignedProd_T_1__0_carry_i_42/O
+                         net (fo=2, routed)           0.245     9.327    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/_sExpAlignedProd_T_1__0_carry_i_42_n_0
+    SLICE_X44Y109        LUT5 (Prop_lut5_I4_O)        0.043     9.370 f  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/_sExpAlignedProd_T_1__0_carry_i_25/O
+                         net (fo=3, routed)           0.283     9.653    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/_sExpAlignedProd_T_1__0_carry_i_25_n_0
+    SLICE_X44Y107        LUT4 (Prop_lut4_I0_O)        0.043     9.696 f  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/_sExpAlignedProd_T_1__0_carry_i_35/O
+                         net (fo=2, routed)           0.366    10.063    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/_sExpAlignedProd_T_1__0_carry_i_35_n_0
+    SLICE_X44Y107        LUT6 (Prop_lut6_I5_O)        0.043    10.106 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/_sExpAlignedProd_T_1__0_carry_i_20__4/O
+                         net (fo=2, routed)           0.453    10.558    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/_sExpAlignedProd_T_1__0_carry_i_20__4_n_0
+    SLICE_X44Y110        LUT3 (Prop_lut3_I1_O)        0.051    10.609 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/_sExpAlignedProd_T_1__0_carry_i_11__7/O
+                         net (fo=40, routed)          0.597    11.206    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/_sExpAlignedProd_T_1__0_carry_i_11__7_n_0
+    SLICE_X47Y113        LUT5 (Prop_lut5_I2_O)        0.136    11.342 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/io_mulAddResult1_i_69__14/O
+                         net (fo=2, routed)           0.569    11.911    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/io_mulAddResult1_i_69__14_n_0
+    SLICE_X51Y113        LUT3 (Prop_lut3_I0_O)        0.051    11.962 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/io_mulAddResult1_i_37__14/O
+                         net (fo=3, routed)           0.641    12.603    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/io_mulAddResult1_i_37__14_n_0
+    SLICE_X56Y113        LUT2 (Prop_lut2_I0_O)        0.144    12.747 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/_sExpAlignedProd_T_1__0_carry_i_13__18/O
+                         net (fo=4, routed)           0.422    13.169    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/_sExpAlignedProd_T_1__0_carry_i_13__18_n_0
+    SLICE_X56Y117        LUT3 (Prop_lut3_I0_O)        0.138    13.307 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/io_mulAddResult1_i_21__17/O
+                         net (fo=27, routed)          0.633    13.940    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/io_mulAddResult1_i_21__17_n_0
+    SLICE_X54Y112        LUT5 (Prop_lut5_I3_O)        0.134    14.074 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/io_mulAddResult1_i_13__17/O
+                         net (fo=1, routed)           0.438    14.512    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/_activated_data_e_scaled_in_to_rec_fn_15_io_out[4]
+    DSP48_X2Y46          DSP48E1 (Prop_dsp48e1_B[4]_PCOUT[47])
+                                                      2.749    17.261 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_mulAddResult1/PCOUT[47]
+                         net (fo=1, routed)           0.000    17.261    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_mulAddResult1_n_106
+    DSP48_X2Y47          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.077    18.338 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_mulAddResult1__0/P[0]
+                         net (fo=2, routed)           0.636    18.974    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_mulAddResult1__1[17]
+    SLICE_X60Y118        LUT2 (Prop_lut2_I0_O)        0.043    19.017 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_124__3/O
+                         net (fo=1, routed)           0.000    19.017    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_124__3_n_0
+    SLICE_X60Y118        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.267    19.284 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_89__18/CO[3]
+                         net (fo=1, routed)           0.000    19.284    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_89__18_n_0
+    SLICE_X60Y119        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.053    19.337 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_86__18/CO[3]
+                         net (fo=1, routed)           0.000    19.337    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_86__18_n_0
+    SLICE_X60Y120        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.053    19.390 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_81__18/CO[3]
+                         net (fo=1, routed)           0.000    19.390    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_81__18_n_0
+    SLICE_X60Y121        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.166    19.556 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_84__18/O[1]
+                         net (fo=4, routed)           0.464    20.020    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_84__18_n_6
+    SLICE_X64Y121        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.390    20.410 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_83__18/CO[3]
+                         net (fo=1, routed)           0.000    20.410    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_83__18_n_0
+    SLICE_X64Y122        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.166    20.576 f  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_72__18/O[1]
+                         net (fo=3, routed)           0.488    21.063    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/notCDom_absSigSum0[34]
+    SLICE_X65Y123        LUT6 (Prop_lut6_I0_O)        0.123    21.186 f  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_52__18/O
+                         net (fo=3, routed)           0.478    21.664    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/notCDom_normDistReduced29__0
+    SLICE_X62Y123        LUT6 (Prop_lut6_I0_O)        0.043    21.707 f  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_45__18/O
+                         net (fo=5, routed)           0.439    22.146    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_45__18_n_0
+    SLICE_X62Y119        LUT5 (Prop_lut5_I0_O)        0.043    22.189 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_60__18/O
+                         net (fo=2, routed)           0.338    22.527    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_60__18_n_0
+    SLICE_X62Y120        LUT6 (Prop_lut6_I0_O)        0.043    22.570 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_37__18/O
+                         net (fo=1, routed)           0.351    22.920    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_37__18_n_0
+    SLICE_X63Y120        LUT5 (Prop_lut5_I0_O)        0.043    22.963 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_16__18/O
+                         net (fo=1, routed)           0.374    23.337    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_16__18_n_0
+    SLICE_X63Y124        LUT6 (Prop_lut6_I4_O)        0.043    23.380 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/io_rawOut_sExp_carry_i_8__18/O
+                         net (fo=46, routed)          0.528    23.908    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_preMul/notCDom_normDistReduced2__0[1]
+    SLICE_X63Y121        LUT4 (Prop_lut4_I3_O)        0.043    23.951 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_preMul/io_rawOut_sExp_carry_i_5__18/O
+                         net (fo=1, routed)           0.000    23.951    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/S[2]
+    SLICE_X63Y121        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.195    24.146 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/io_rawOut_sExp_carry/CO[3]
+                         net (fo=1, routed)           0.000    24.146    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/io_rawOut_sExp_carry_n_0
+    SLICE_X63Y122        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.166    24.312 f  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/io_rawOut_sExp_carry__0/O[1]
+                         net (fo=21, routed)          0.554    24.866    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/_mulAddRecFNToRaw_postMul_io_rawOut_sExp[5]
+    SLICE_X68Y124        LUT3 (Prop_lut3_I2_O)        0.131    24.997 f  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/i__carry_i_9__18/O
+                         net (fo=14, routed)          0.506    25.502    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/i__carry_i_9__18_n_0
+    SLICE_X73Y122        LUT6 (Prop_lut6_I5_O)        0.136    25.638 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/i__carry_i_12__18/O
+                         net (fo=6, routed)           0.467    26.105    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/roundRawFNToRecFN/roundAnyRawFNToRecFN/_GEN_1[4]
+    SLICE_X72Y122        LUT5 (Prop_lut5_I3_O)        0.043    26.148 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/sRoundedExp_carry_i_42__18/O
+                         net (fo=1, routed)           0.329    26.478    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/sRoundedExp_carry_i_42__18_n_0
+    SLICE_X72Y122        LUT6 (Prop_lut6_I4_O)        0.043    26.521 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/sRoundedExp_carry_i_35__18/O
+                         net (fo=1, routed)           0.342    26.863    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/sRoundedExp_carry_i_35__18_n_0
+    SLICE_X71Y125        LUT6 (Prop_lut6_I5_O)        0.043    26.906 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/sRoundedExp_carry_i_26__18/O
+                         net (fo=1, routed)           0.192    27.098    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/sRoundedExp_carry_i_26__18_n_0
+    SLICE_X69Y125        LUT6 (Prop_lut6_I5_O)        0.043    27.141 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/sRoundedExp_carry_i_12__18/O
+                         net (fo=1, routed)           0.181    27.322    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/sRoundedExp_carry_i_12__18_n_0
+    SLICE_X69Y126        LUT6 (Prop_lut6_I5_O)        0.043    27.365 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/sRoundedExp_carry_i_5__18/O
+                         net (fo=28, routed)          0.448    27.814    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/roundRawFNToRecFN/roundAnyRawFNToRecFN/roundedSig1__24
+    SLICE_X69Y123        LUT6 (Prop_lut6_I5_O)        0.043    27.857 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/sRoundedExp_carry_i_3__18/O
+                         net (fo=26, routed)          0.497    28.353    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/roundRawFNToRecFN/roundAnyRawFNToRecFN/roundedSig4__25
+    SLICE_X71Y127        LUT6 (Prop_lut6_I4_O)        0.043    28.396 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/sRoundedExp_carry_i_2__18/O
+                         net (fo=1, routed)           0.000    28.396    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/roundRawFNToRecFN/roundAnyRawFNToRecFN/stages_0_resp_data_15_0[1]_i_6_0[0]
+    SLICE_X71Y127        CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.259    28.655 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/roundRawFNToRecFN/roundAnyRawFNToRecFN/sRoundedExp_carry/CO[3]
+                         net (fo=1, routed)           0.000    28.655    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/roundRawFNToRecFN/roundAnyRawFNToRecFN/sRoundedExp_carry_n_0
+    SLICE_X71Y128        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.111    28.766 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/roundRawFNToRecFN/roundAnyRawFNToRecFN/sRoundedExp_carry__0/O[0]
+                         net (fo=58, routed)          0.462    29.228    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/roundRawFNToRecFN/roundAnyRawFNToRecFN/io_rawOut_sExp_carry[0]
+    SLICE_X72Y128        LUT5 (Prop_lut5_I4_O)        0.130    29.358 f  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/roundRawFNToRecFN/roundAnyRawFNToRecFN/stages_0_resp_data_15_0[7]_i_70/O
+                         net (fo=1, routed)           0.266    29.624    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/roundRawFNToRecFN/roundAnyRawFNToRecFN/stages_0_resp_data_15_0[7]_i_70_n_0
+    SLICE_X72Y129        LUT6 (Prop_lut6_I3_O)        0.136    29.760 f  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/roundRawFNToRecFN/roundAnyRawFNToRecFN/stages_0_resp_data_15_0[7]_i_31/O
+                         net (fo=1, routed)           0.360    30.120    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/stages_0_resp_data_15_0[7]_i_9
+    SLICE_X72Y129        LUT3 (Prop_lut3_I1_O)        0.043    30.163 f  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/stages_0_resp_data_15_0[7]_i_13/O
+                         net (fo=26, routed)          0.482    30.645    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/io_out7__0_121
+    SLICE_X74Y128        LUT4 (Prop_lut4_I2_O)        0.043    30.688 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/stages_0_resp_data_15_0[7]_i_10/O
+                         net (fo=104, routed)         0.299    30.988    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/sRoundedExp_carry__1
+    SLICE_X74Y128        LUT2 (Prop_lut2_I0_O)        0.051    31.039 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/stages_0_resp_data_15_0[6]_i_11/O
+                         net (fo=28, routed)          0.495    31.534    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/stages_0_resp_data_15_0[7]_i_174_0
+    SLICE_X73Y129        LUT6 (Prop_lut6_I2_O)        0.134    31.668 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/stages_0_resp_data_15_0[6]_i_22/O
+                         net (fo=2, routed)           0.503    32.171    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/stages_0_resp_data_15_0[5]_i_14_1
+    SLICE_X76Y127        LUT4 (Prop_lut4_I3_O)        0.052    32.223 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/stages_0_resp_data_15_0[6]_i_9/O
+                         net (fo=2, routed)           0.450    32.673    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/stages_0_resp_data_15_0[6]_i_9_n_0
+    SLICE_X78Y127        LUT6 (Prop_lut6_I0_O)        0.136    32.809 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/stages_0_resp_data_15_0[6]_i_5/O
+                         net (fo=4, routed)           0.370    33.179    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/sRoundedExp_carry_2
+    SLICE_X78Y127        LUT4 (Prop_lut4_I3_O)        0.043    33.222 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/mulAddRecFNToRaw_postMul/stages_0_resp_data_15_0[6]_i_3/O
+                         net (fo=3, routed)           0.366    33.588    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/roundRawFNToRecFN/roundAnyRawFNToRecFN/stages_0_resp_data_15_0[7]_i_28_0[2]
+    SLICE_X79Y127        LUT4 (Prop_lut4_I3_O)        0.043    33.631 f  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/roundRawFNToRecFN/roundAnyRawFNToRecFN/stages_0_resp_data_15_0[7]_i_63/O
+                         net (fo=1, routed)           0.277    33.908    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/roundRawFNToRecFN/roundAnyRawFNToRecFN/stages_0_resp_data_15_0[7]_i_63_n_0
+    SLICE_X80Y128        LUT6 (Prop_lut6_I1_O)        0.043    33.951 f  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/roundRawFNToRecFN/roundAnyRawFNToRecFN/stages_0_resp_data_15_0[7]_i_28/O
+                         net (fo=1, routed)           0.331    34.282    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/roundRawFNToRecFN/roundAnyRawFNToRecFN/stages_0_resp_data_15_0[7]_i_28_n_0
+    SLICE_X79Y130        LUT6 (Prop_lut6_I4_O)        0.043    34.325 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/activated_data_e_scaled_muladder_15/roundRawFNToRecFN/roundAnyRawFNToRecFN/stages_0_resp_data_15_0[7]_i_8/O
+                         net (fo=1, routed)           0.232    34.557    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/stages_0_resp_data_15_0_reg[1]
+    SLICE_X79Y130        LUT5 (Prop_lut5_I0_O)        0.052    34.609 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/stages_0_resp_data_15_0[7]_i_2/O
+                         net (fo=91, routed)          0.573    35.182    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/stages_0_resp_data_15_0[7]_i_2_n_0
+    SLICE_X81Y127        LUT6 (Prop_lut6_I5_O)        0.136    35.318 f  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/stages_0_resp_data_15_0[7]_i_179/O
+                         net (fo=4, routed)           0.453    35.772    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/acc_scale_unit/_activated_data_e_scaled_rec_fn_to_in_15_io_out[8]
+    SLICE_X80Y129        LUT5 (Prop_lut5_I2_O)        0.043    35.815 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/stages_0_resp_data_15_0[7]_i_169/O
+                         net (fo=1, routed)           0.000    35.815    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/stages_0_resp_data_15_0[7]_i_169_n_0
+    SLICE_X80Y129        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.267    36.082 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/stages_0_resp_data_15_0_reg[7]_i_102/CO[3]
+                         net (fo=1, routed)           0.000    36.082    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/stages_0_resp_data_15_0_reg[7]_i_102_n_0
+    SLICE_X80Y130        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.053    36.135 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/stages_0_resp_data_15_0_reg[7]_i_53/CO[3]
+                         net (fo=1, routed)           0.000    36.135    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/stages_0_resp_data_15_0_reg[7]_i_53_n_0
+    SLICE_X80Y131        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.053    36.188 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/stages_0_resp_data_15_0_reg[7]_i_24/CO[3]
+                         net (fo=1, routed)           0.000    36.188    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/stages_0_resp_data_15_0_reg[7]_i_24_n_0
+    SLICE_X80Y132        CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.139    36.327 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/stages_0_resp_data_15_0_reg[7]_i_7/CO[0]
+                         net (fo=8, routed)           0.465    36.792    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/acc_scale_unit/activated_data_15_01
+    SLICE_X78Y130        LUT6 (Prop_lut6_I2_O)        0.131    36.923 r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/norm_unit_passthru_q/ram_ext/stages_0_resp_data_15_0[1]_i_1/O
+                         net (fo=1, routed)           0.000    36.923    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/pipe_out_p/io_in_bits_resp_data_15_0[1]
+    SLICE_X78Y130        FDRE                                         r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/pipe_out_p/stages_0_resp_data_15_0_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                     33.333    33.333 r  
+    AD12                                              0.000    33.333 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000    33.333    genesystimer/inst/sys_clk_p
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.803    34.137 r  genesystimer/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           2.173    36.310    genesystimer/inst/clk_in1_clk_wiz_0_buf
+    BUFGCTRL_X0Y4        BUFG (Prop_bufg_I_O)         0.083    36.393 r  genesystimer/inst/clkin1_bufg1/O
+                         net (fo=1, routed)           1.776    38.169    genesystimer/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.195    33.974 r  genesystimer/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.336    36.310    genesystimer/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083    36.393 r  genesystimer/inst/clkout1_buf/O
+                         net (fo=73024, routed)       1.247    37.640    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/pipe_out_p/clk_inner
+    SLICE_X78Y130        FDRE                                         r  chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/pipe_out_p/stages_0_resp_data_15_0_reg[1]/C
+                         clock pessimism              0.253    37.893    
+                         clock uncertainty           -0.146    37.747    
+    SLICE_X78Y130        FDRE (Setup_fdre_C_D)        0.065    37.812    chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/spad/acc_scale_unit/pipe_out_p/stages_0_resp_data_15_0_reg[1]
+  -------------------------------------------------------------------
+                         required time                         37.812    
+                         arrival time                         -36.923    
+  -------------------------------------------------------------------
+                         slack                                  0.889    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -0.215ns  (arrival time - required time)
+  Source:                 chiptop/system/cbus/buffer/nodeOut_a_q/ram_ext/Memory_reg_0_1_78_83/RAMA/CLK
+                            (rising edge-triggered cell RAMD32 clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@16.667ns period=33.333ns})
+  Destination:            chiptop/system/tlDM/dmInner/dmInner/abstractDataMem_26_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@16.667ns period=33.333ns})
+  Path Group:             clk_out1_clk_wiz_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        2.431ns  (logic 0.675ns (27.765%)  route 1.756ns (72.235%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        2.457ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    6.837ns
+    Source Clock Delay      (SCD):    4.141ns
+    Clock Pessimism Removal (CPR):    0.238ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    AD12                                              0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    genesystimer/inst/sys_clk_p
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.803     0.803 r  genesystimer/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           2.173     2.976    genesystimer/inst/clk_in1_clk_wiz_0_buf
+    BUFGCTRL_X0Y4        BUFG (Prop_bufg_I_O)         0.083     3.059 r  genesystimer/inst/clkin1_bufg1/O
+                         net (fo=1, routed)           1.776     4.835    genesystimer/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.195     0.640 r  genesystimer/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.336     2.976    genesystimer/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     3.059 r  genesystimer/inst/clkout1_buf/O
+                         net (fo=73024, routed)       1.082     4.141    chiptop/system/cbus/buffer/nodeOut_a_q/ram_ext/Memory_reg_0_1_78_83/WCLK
+    SLICE_X86Y241        RAMD32                                       r  chiptop/system/cbus/buffer/nodeOut_a_q/ram_ext/Memory_reg_0_1_78_83/RAMA/CLK
+  -------------------------------------------------------------------    -------------------
+    SLICE_X86Y241        RAMD32 (Prop_ramd32_CLK_O)
+                                                      0.566     4.707 r  chiptop/system/cbus/buffer/nodeOut_a_q/ram_ext/Memory_reg_0_1_78_83/RAMA/O
+                         net (fo=16, routed)          1.756     6.464    chiptop/system/cbus/buffer/nodeOut_a_q/ram_ext/R0_data0[78]
+    SLICE_X114Y256       LUT5 (Prop_lut5_I0_O)        0.109     6.573 r  chiptop/system/cbus/buffer/nodeOut_a_q/ram_ext/abstractDataMem_26[5]_i_1/O
+                         net (fo=1, routed)           0.000     6.573    chiptop/system/tlDM/dmInner/dmInner/abstractDataMem_26_reg[5]_1
+    SLICE_X114Y256       FDRE                                         r  chiptop/system/tlDM/dmInner/dmInner/abstractDataMem_26_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    AD12                                              0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    genesystimer/inst/sys_clk_p
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.906     0.906 r  genesystimer/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           2.299     3.205    genesystimer/inst/clk_in1_clk_wiz_0_buf
+    BUFGCTRL_X0Y4        BUFG (Prop_bufg_I_O)         0.093     3.298 r  genesystimer/inst/clkin1_bufg1/O
+                         net (fo=1, routed)           1.936     5.234    genesystimer/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.498     0.736 r  genesystimer/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.469     3.205    genesystimer/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.298 r  genesystimer/inst/clkout1_buf/O
+                         net (fo=73024, routed)       1.494     4.791    chiptop/gated_clock_debug_clock_gate/clk_inner
+    SLICE_X80Y197        LUT2 (Prop_lut2_I1_O)        0.043     4.834 r  chiptop/gated_clock_debug_clock_gate/ABSTRACTAUTOReg_autoexecdata[7]_i_7/O
+                         net (fo=1, routed)           0.513     5.347    chiptop_n_267
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.093     5.440 r  ABSTRACTAUTOReg_autoexecdata_reg[7]_i_3/O
+                         net (fo=960, routed)         1.397     6.837    chiptop/system/tlDM/dmInner/dmInner/_gated_clock_debug_clock_gate_out
+    SLICE_X114Y256       FDRE                                         r  chiptop/system/tlDM/dmInner/dmInner/abstractDataMem_26_reg[5]/C
+                         clock pessimism             -0.238     6.599    
+    SLICE_X114Y256       FDRE (Hold_fdre_C_D)         0.189     6.788    chiptop/system/tlDM/dmInner/dmInner/abstractDataMem_26_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -6.788    
+                         arrival time                           6.573    
+  -------------------------------------------------------------------
+                         slack                                 -0.215    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_out1_clk_wiz_0
+Waveform(ns):       { 0.000 16.667 }
+Period(ns):         33.333
+Sources:            { genesystimer/inst/mmcm_adv_inst/CLKOUT0 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     DSP48E1/CLK         n/a            2.772         33.333      30.561     DSP48_X3Y93      chiptop/system/tile_prci_domain/element_reset_domain_rockettile/gemmini/mod/ex/io_in_bits_cmd_rs11/CLK
+Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       33.333      180.027    MMCME2_ADV_X1Y0  genesystimer/inst/mmcm_adv_inst/CLKOUT0
+Low Pulse Width   Slow    RAMD32/CLK          n/a            0.768         16.667      15.899     SLICE_X74Y256    chiptop/system/cbus/buffer/nodeIn_d_q/ram_ext/Memory_reg_0_1_0_5/RAMA/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            0.768         16.667      15.899     SLICE_X74Y256    chiptop/system/cbus/buffer/nodeIn_d_q/ram_ext/Memory_reg_0_1_0_5/RAMA/CLK
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clkfbout_clk_wiz_0
+  To Clock:  clkfbout_clk_wiz_0
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack       48.591ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clkfbout_clk_wiz_0
+Waveform(ns):       { 0.000 25.000 }
+Period(ns):         50.000
+Sources:            { genesystimer/inst/mmcm_adv_inst/CLKFBOUT }
+
+Check Type  Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     BUFG/I              n/a            1.408         50.000      48.591     BUFGCTRL_X0Y3    genesystimer/inst/clkf_buf/I
+Max Period  n/a     MMCME2_ADV/CLKFBIN  n/a            100.000       50.000      50.000     MMCME2_ADV_X1Y0  genesystimer/inst/mmcm_adv_inst/CLKFBIN
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  clk_out1_clk_wiz_0
+  To Clock:  clk_out1_clk_wiz_0
+
+Setup :            0  Failing Endpoints,  Worst Slack       29.004ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.103ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             29.004ns  (required time - arrival time)
+  Source:                 chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_inv/C
+                            (rising edge-triggered cell FDPE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@16.667ns period=33.333ns})
+  Destination:            chiptop/system/clint_domain/intsource/reg_0/reg_0_reg[1]/CLR
+                            (recovery check against rising-edge clock clk_out1_clk_wiz_0  {rise@0.000ns fall@16.667ns period=33.333ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            33.333ns  (clk_out1_clk_wiz_0 rise@33.333ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        3.998ns  (logic 0.223ns (5.578%)  route 3.775ns (94.422%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.284ns = ( 37.618 - 33.333 ) 
+    Source Clock Delay      (SCD):    4.510ns
+    Clock Pessimism Removal (CPR):    0.251ns
+  Clock Uncertainty:      0.146ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.283ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    AD12                                              0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    genesystimer/inst/sys_clk_p
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.906     0.906 r  genesystimer/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           2.299     3.205    genesystimer/inst/clk_in1_clk_wiz_0_buf
+    BUFGCTRL_X0Y4        BUFG (Prop_bufg_I_O)         0.093     3.298 r  genesystimer/inst/clkin1_bufg1/O
+                         net (fo=1, routed)           1.936     5.234    genesystimer/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.498     0.736 r  genesystimer/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.469     3.205    genesystimer/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.298 r  genesystimer/inst/clkout1_buf/O
+                         net (fo=73024, routed)       1.212     4.510    chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/clk_inner
+    SLICE_X97Y222        FDPE                                         r  chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_inv/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X97Y222        FDPE (Prop_fdpe_C_Q)         0.223     4.733 f  chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_inv/Q
+                         net (fo=2312, routed)        3.775     8.507    chiptop/system/clint_domain/intsource/reg_0/SR[0]
+    SLICE_X105Y254       FDCE                                         f  chiptop/system/clint_domain/intsource/reg_0/reg_0_reg[1]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                     33.333    33.333 r  
+    AD12                                              0.000    33.333 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000    33.333    genesystimer/inst/sys_clk_p
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.803    34.137 r  genesystimer/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           2.173    36.310    genesystimer/inst/clk_in1_clk_wiz_0_buf
+    BUFGCTRL_X0Y4        BUFG (Prop_bufg_I_O)         0.083    36.393 r  genesystimer/inst/clkin1_bufg1/O
+                         net (fo=1, routed)           1.776    38.169    genesystimer/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.195    33.974 r  genesystimer/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.336    36.310    genesystimer/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083    36.393 r  genesystimer/inst/clkout1_buf/O
+                         net (fo=73024, routed)       1.225    37.618    chiptop/system/clint_domain/intsource/reg_0/clk_inner
+    SLICE_X105Y254       FDCE                                         r  chiptop/system/clint_domain/intsource/reg_0/reg_0_reg[1]/C
+                         clock pessimism              0.251    37.869    
+                         clock uncertainty           -0.146    37.723    
+    SLICE_X105Y254       FDCE (Recov_fdce_C_CLR)     -0.212    37.511    chiptop/system/clint_domain/intsource/reg_0/reg_0_reg[1]
+  -------------------------------------------------------------------
+                         required time                         37.511    
+                         arrival time                          -8.507    
+  -------------------------------------------------------------------
+                         slack                                 29.004    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.103ns  (arrival time - required time)
+  Source:                 chiptop/debug_reset_syncd_debug_reset_sync/output_chain/sync_0_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@16.667ns period=33.333ns})
+  Destination:            chiptop/system/tlDM/dmInner/dmiXing/nodeIn_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_0_reg/CLR
+                            (removal check against rising-edge clock clk_out1_clk_wiz_0  {rise@0.000ns fall@16.667ns period=33.333ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_clk_wiz_0 rise@0.000ns - clk_out1_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        1.541ns  (logic 0.128ns (8.305%)  route 1.413ns (91.695%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        1.488ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    3.761ns
+    Source Clock Delay      (SCD):    2.116ns
+    Clock Pessimism Removal (CPR):    0.156ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    AD12                                              0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    genesystimer/inst/sys_clk_p
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.388     0.388 r  genesystimer/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.083     1.471    genesystimer/inst/clk_in1_clk_wiz_0_buf
+    BUFGCTRL_X0Y4        BUFG (Prop_bufg_I_O)         0.026     1.497 r  genesystimer/inst/clkin1_bufg1/O
+                         net (fo=1, routed)           0.761     2.258    genesystimer/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.914     0.344 r  genesystimer/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.127     1.471    genesystimer/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.497 r  genesystimer/inst/clkout1_buf/O
+                         net (fo=73024, routed)       0.619     2.116    chiptop/debug_reset_syncd_debug_reset_sync/output_chain/clk_inner
+    SLICE_X121Y267       FDCE                                         r  chiptop/debug_reset_syncd_debug_reset_sync/output_chain/sync_0_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X121Y267       FDCE (Prop_fdce_C_Q)         0.100     2.216 r  chiptop/debug_reset_syncd_debug_reset_sync/output_chain/sync_0_reg/Q
+                         net (fo=4, routed)           0.833     3.050    chiptop/debug_reset_syncd_debug_reset_sync/output_chain/sync_0_reg_0
+    SLICE_X128Y267       LUT2 (Prop_lut2_I0_O)        0.028     3.078 f  chiptop/debug_reset_syncd_debug_reset_sync/output_chain/sync_2_i_1__1/O
+                         net (fo=9, routed)           0.580     3.658    chiptop/system/tlDM/dmInner/dmiXing/nodeIn_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_1_reg_0
+    SLICE_X130Y267       FDCE                                         f  chiptop/system/tlDM/dmInner/dmiXing/nodeIn_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_0_reg/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    AD12                                              0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    genesystimer/inst/sys_clk_p
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.470     0.470 r  genesystimer/inst/clkin1_ibufgds/O
+                         net (fo=1, routed)           1.154     1.624    genesystimer/inst/clk_in1_clk_wiz_0_buf
+    BUFGCTRL_X0Y4        BUFG (Prop_bufg_I_O)         0.030     1.654 r  genesystimer/inst/clkin1_bufg1/O
+                         net (fo=1, routed)           1.030     2.684    genesystimer/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.256     0.428 r  genesystimer/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.196     1.624    genesystimer/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.654 r  genesystimer/inst/clkout1_buf/O
+                         net (fo=73024, routed)       0.899     2.552    chiptop/gated_clock_debug_clock_gate/clk_inner
+    SLICE_X80Y197        LUT2 (Prop_lut2_I1_O)        0.035     2.587 r  chiptop/gated_clock_debug_clock_gate/ABSTRACTAUTOReg_autoexecdata[7]_i_7/O
+                         net (fo=1, routed)           0.273     2.860    chiptop_n_267
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.030     2.890 r  ABSTRACTAUTOReg_autoexecdata_reg[7]_i_3/O
+                         net (fo=960, routed)         0.871     3.761    chiptop/system/tlDM/dmInner/dmiXing/nodeIn_d_source/sink_extend/io_out_source_valid_0/output_chain/_gated_clock_debug_clock_gate_out
+    SLICE_X130Y267       FDCE                                         r  chiptop/system/tlDM/dmInner/dmiXing/nodeIn_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_0_reg/C
+                         clock pessimism             -0.156     3.605    
+    SLICE_X130Y267       FDCE (Remov_fdce_C_CLR)     -0.050     3.555    chiptop/system/tlDM/dmInner/dmiXing/nodeIn_d_source/sink_extend/io_out_source_valid_0/output_chain/sync_0_reg
+  -------------------------------------------------------------------
+                         required time                         -3.555    
+                         arrival time                           3.658    
+  -------------------------------------------------------------------
+                         slack                                  0.103    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  jtag_clk_pin
+  To Clock:  jtag_clk_pin
+
+Setup :            0  Failing Endpoints,  Worst Slack       45.575ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.654ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             45.575ns  (required time - arrival time)
+  Source:                 chiptop/system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg/C
+                            (rising edge-triggered cell FDCE clocked by jtag_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            chiptop/system/dtm/tapIO_controllerInternal/activeInstruction_reg[0]/PRE
+                            (recovery check against rising-edge clock jtag_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            50.000ns  (jtag_clk_pin fall@50.000ns - jtag_clk_pin rise@0.000ns)
+  Data Path Delay:        4.169ns  (logic 0.266ns (6.381%)  route 3.903ns (93.619%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.037ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.576ns = ( 54.576 - 50.000 ) 
+    Source Clock Delay      (SCD):    4.997ns
+    Clock Pessimism Removal (CPR):    0.384ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock jtag_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    U27                                               0.000     0.000 r  jtag_tck (IN)
+                         net (fo=0)                   0.000     0.000    jtag_tck
+    U27                  IBUF (Prop_ibuf_I_O)         1.497     1.497 r  jtag_tck_IBUF_inst/O
+                         net (fo=1, routed)           1.973     3.470    jtag_tck_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.093     3.563 r  jtag_tck_IBUF_BUFG_inst/O
+                         net (fo=289, routed)         1.434     4.997    chiptop/system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/jtag_tck_IBUF_BUFG
+    SLICE_X127Y270       FDCE                                         r  chiptop/system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X127Y270       FDCE (Prop_fdce_C_Q)         0.223     5.220 r  chiptop/system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg/Q
+                         net (fo=7, routed)           1.087     6.307    chiptop/system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/sync_0
+    SLICE_X96Y268        LUT1 (Prop_lut1_I0_O)        0.043     6.350 f  chiptop/system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/in_reset_i_1/O
+                         net (fo=48, routed)          2.816     9.166    chiptop/system/dtm/tapIO_controllerInternal/_system_debug_systemjtag_reset_catcher_io_sync_reset
+    SLICE_X136Y266       FDPE                                         f  chiptop/system/dtm/tapIO_controllerInternal/activeInstruction_reg[0]/PRE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock jtag_clk_pin fall edge)
+                                                     50.000    50.000 f  
+    U27                                               0.000    50.000 f  jtag_tck (IN)
+                         net (fo=0)                   0.000    50.000    jtag_tck
+    U27                  IBUF (Prop_ibuf_I_O)         1.365    51.365 f  jtag_tck_IBUF_inst/O
+                         net (fo=1, routed)           1.854    53.219    jtag_tck_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.083    53.302 f  jtag_tck_IBUF_BUFG_inst/O
+                         net (fo=289, routed)         1.274    54.576    chiptop/system/dtm/tapIO_controllerInternal/CLK
+    SLICE_X136Y266       FDPE                                         r  chiptop/system/dtm/tapIO_controllerInternal/activeInstruction_reg[0]/C  (IS_INVERTED)
+                         clock pessimism              0.384    54.960    
+                         clock uncertainty           -0.035    54.925    
+    SLICE_X136Y266       FDPE (Recov_fdpe_C_PRE)     -0.184    54.741    chiptop/system/dtm/tapIO_controllerInternal/activeInstruction_reg[0]
+  -------------------------------------------------------------------
+                         required time                         54.741    
+                         arrival time                          -9.166    
+  -------------------------------------------------------------------
+                         slack                                 45.575    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.654ns  (arrival time - required time)
+  Source:                 chiptop/system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg/C
+                            (rising edge-triggered cell FDCE clocked by jtag_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            chiptop/system/tlDM/dmOuter/asource/nodeIn_d_sink/sink_valid_0/io_out_source_valid_0/output_chain/sync_1_reg/CLR
+                            (removal check against rising-edge clock jtag_clk_pin  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns  (jtag_clk_pin rise@0.000ns - jtag_clk_pin rise@0.000ns)
+  Data Path Delay:        0.581ns  (logic 0.131ns (22.559%)  route 0.450ns (77.441%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.037ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.495ns
+    Source Clock Delay      (SCD):    1.996ns
+    Clock Pessimism Removal (CPR):    0.462ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock jtag_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    U27                                               0.000     0.000 r  jtag_tck (IN)
+                         net (fo=0)                   0.000     0.000    jtag_tck
+    U27                  IBUF (Prop_ibuf_I_O)         0.422     0.422 r  jtag_tck_IBUF_inst/O
+                         net (fo=1, routed)           0.904     1.326    jtag_tck_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.026     1.352 r  jtag_tck_IBUF_BUFG_inst/O
+                         net (fo=289, routed)         0.644     1.996    chiptop/system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/jtag_tck_IBUF_BUFG
+    SLICE_X127Y270       FDCE                                         r  chiptop/system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X127Y270       FDCE (Prop_fdce_C_Q)         0.100     2.096 r  chiptop/system_debug_systemjtag_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg/Q
+                         net (fo=7, routed)           0.288     2.385    chiptop/debug_reset_syncd_debug_reset_sync/output_chain/sync_0
+    SLICE_X128Y267       LUT2 (Prop_lut2_I1_O)        0.031     2.416 f  chiptop/debug_reset_syncd_debug_reset_sync/output_chain/sync_2_i_1__0/O
+                         net (fo=9, routed)           0.161     2.577    chiptop/system/tlDM/dmOuter/asource/nodeIn_d_sink/sink_valid_0/io_out_source_valid_0/output_chain/sync_0_reg_1
+    SLICE_X135Y267       FDCE                                         f  chiptop/system/tlDM/dmOuter/asource/nodeIn_d_sink/sink_valid_0/io_out_source_valid_0/output_chain/sync_1_reg/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock jtag_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    U27                                               0.000     0.000 r  jtag_tck (IN)
+                         net (fo=0)                   0.000     0.000    jtag_tck
+    U27                  IBUF (Prop_ibuf_I_O)         0.618     0.618 r  jtag_tck_IBUF_inst/O
+                         net (fo=1, routed)           0.973     1.591    jtag_tck_IBUF
+    BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.030     1.621 r  jtag_tck_IBUF_BUFG_inst/O
+                         net (fo=289, routed)         0.874     2.495    chiptop/system/tlDM/dmOuter/asource/nodeIn_d_sink/sink_valid_0/io_out_source_valid_0/output_chain/jtag_tck_IBUF_BUFG
+    SLICE_X135Y267       FDCE                                         r  chiptop/system/tlDM/dmOuter/asource/nodeIn_d_sink/sink_valid_0/io_out_source_valid_0/output_chain/sync_1_reg/C
+                         clock pessimism             -0.462     2.033    
+    SLICE_X135Y267       FDCE (Remov_fdce_C_CLR)     -0.110     1.923    chiptop/system/tlDM/dmOuter/asource/nodeIn_d_sink/sink_valid_0/io_out_source_valid_0/output_chain/sync_1_reg
+  -------------------------------------------------------------------
+                         required time                         -1.923    
+                         arrival time                           2.577    
+  -------------------------------------------------------------------
+                         slack                                  0.654    
+
+
+
+
+
