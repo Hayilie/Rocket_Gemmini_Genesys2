@@ -1,0 +1,15 @@
+# Vivado Geçici ve Çıktı Dosyaları
+outputs/
+reports/
+managed_proj/
+*.log
+*.jou
+*.dcp
+*.bit
+*.str
+.Xil/
+
+# Scala/Chisel Derleme Dosyaları
+target/
+project/project/
+project/target/
