@@ -1,11 +1,11 @@
-| Quantity | Module Name            | Depth | Width (Total) | Total Capacity |
-|----------|------------------------|-------|---------------|----------------|
-|    1     | cc_dir_ext             | 256   | 152 bits      | 4.75 KB        |
-|    1     | cc_banks_0_ext         | 2048  | 64 bits       | 16 KB          |
-|    2     | data_arrays_0_ext      | 256   | 256 bits      | 2 x 8 KB       |
-|    1     | tag_array_ext          | 64    | 88 bits       | 0.68 KB        |
-|    4     | mem_ext                | 4096  | 128 bits      | 4 x 64 KB      |
-|    2     | mem_0_ext              | 512   | 512 bits      | 2 x 32 KB      |
-|    1     | tag_array_0_ext        | 64    | 84 bits       | 0.65 KB        |
-|    4     | data_arrays_0_0_ext    | 256   | 128 bits      | 4 x 4 KB       |
-|    1     | mem_1_ext              | 8192  | 64 bits       | 64 KB          |
+| Quantity | Module Name            | Depth | Width (Total) | Total Capacity | Ports       | Mask Gran |
+|----------|------------------------|-------|---------------|----------------|-------------|-----------|
+|    1     | cc_dir_ext             | 256   | 152 bits      | 4.75 KB        | mrw         | 19        |
+|    1     | cc_banks_0_ext         | 2048  | 64 bits       | 16 KB          | rw          | -         |
+|    2     | data_arrays_0_ext      | 256   | 256 bits      | 2 x 8 KB       | mrw         | 8         |
+|    1     | tag_array_ext          | 64    | 88 bits       | 0.68 KB        | mrw         | 22        |
+|    4     | mem_ext                | 4096  | 128 bits      | 4 x 64 KB      | mrw         | 8         |
+|    2     | mem_0_ext              | 512   | 512 bits      | 2 x 32 KB      | mwrite,read | 8         |
+|    1     | tag_array_0_ext        | 64    | 84 bits       | 0.65 KB        | mrw         | 21        |
+|    4     | data_arrays_0_0_ext    | 256   | 128 bits      | 4 x 4 KB       | mrw         | 32        |
+|    1     | mem_1_ext              | 8192  | 64 bits       | 64 KB          | mrw         | 8         |
